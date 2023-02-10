@@ -33,15 +33,15 @@ class ViewEmployee extends React.Component {
           <div className="card-body">
             <div className="row">
               <label> Employee Name: </label>
-              <div> {this.state.employee.name}</div>
+              <span> {this.state.employee.name}</span>
             </div>
             <div className="row">
               <label> Employee Email: </label>
-              <div> {this.state.employee.email}</div>
+              <span> {this.state.employee.email}</span>
             </div>
             <div className="row">
-              <label> Age: </label>
-              <div> {this.state.employee.age}</div>
+              <label> Gender: </label>
+              <span> {this.state.employee.gender}</span>
             </div>
           </div>
         </div>

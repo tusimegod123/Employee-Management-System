@@ -76,7 +76,7 @@ class AddEmployee extends React.Component {
                       type="text"
                       className="form-control"
                       id="exampleFormControlInput"
-                      placeholder="Employee Age"
+                      placeholder="Employee Name"
                       name="name"
                       onChange={this.changeHandler}
                     />
@@ -87,19 +87,19 @@ class AddEmployee extends React.Component {
                       type="email"
                       className="form-control"
                       id="exampleFormControlInput1"
-                      placeholder="Employee Name"
+                      placeholder="Employee Email"
                       name="email"
                       onChange={this.changeHandler}
                     />
                     <label for="exampleFormControlInput1" class="form-label">
-                      Age
+                      Gender
                     </label>
                     <input
                       type="text"
                       className="form-control"
                       id="exampleFormControlInput1"
-                      placeholder="Employee Age"
-                      name="age"
+                      placeholder="Employee Gender"
+                      name="gender"
                       onChange={this.changeHandler}
                     />
                   </div>

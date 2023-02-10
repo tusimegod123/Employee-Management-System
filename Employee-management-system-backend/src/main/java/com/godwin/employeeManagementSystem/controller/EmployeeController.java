@@ -16,17 +16,9 @@ public class EmployeeController {
         this.employeeRepository = employeeRepository;
     }
 
-    record  EmployeeRecord(String name, String email, Integer age){
-    }
-
     @PostMapping
-    public void addCustomer(@RequestBody EmployeeRecord employeeRecord){
-        Employee employee = new Employee();
-        employee.setName(employeeRecord.name);
-        employee.setEmail(employeeRecord.email);
-        employee.setAge(employeeRecord.age);
-        employeeRepository.save(employee);
-
+    public void addEmployee(@RequestBody Employee employeeRecord){
+        employeeRepository.save(employeeRecord);
     }
     @GetMapping
     public List<Employee> employees(){
@@ -38,13 +30,13 @@ public class EmployeeController {
         return employeeRepository.findById(id).get();
 
     }
-
     @PutMapping("{id}")
-    public void updateCustomer(@PathVariable("id") Integer id, @RequestBody EmployeeRecord employeeRecord){
+    public void updateCustomer(@PathVariable("id") Integer id, @RequestBody Employee employeeRecord){
         Employee employee = employeeRepository.findById(id).get();
-        employee.setName(employeeRecord.name);
-        employee.setEmail(employeeRecord.email);
-        employee.setAge(employeeRecord.age);
+        employee.setName(employeeRecord.getName());
+        employee.setEmail(employeeRecord.getEmail());
+        employee.setGender(employeeRecord.getGender());
+//        employee.setEmployeeTasks(employee.setEmployeeTasks();
         employeeRepository.save(employee);
 
     }
